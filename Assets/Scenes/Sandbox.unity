@@ -4863,7 +4863,7 @@ PrefabInstance:
     - target: {fileID: 7561515092409025954, guid: d739457e408ec4c24963e662337706d9,
         type: 3}
       propertyPath: m_StoppingDistance
-      value: 1
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 7561515092409025955, guid: d739457e408ec4c24963e662337706d9,
         type: 3}
@@ -4945,5 +4945,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603850391265771987, guid: d739457e408ec4c24963e662337706d9,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1509356330}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d739457e408ec4c24963e662337706d9, type: 3}
