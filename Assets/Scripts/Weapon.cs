@@ -9,6 +9,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] float damage = 30f;
     [SerializeField] ParticleSystem muzzleFlash;
     [SerializeField] GameObject hitEffect; // Want it to have a particular life and later be destroyed
+    [SerializeField] Ammo ammoSlot;
 
     // Update is called once per frame
     void Update()
@@ -21,8 +22,12 @@ public class Weapon : MonoBehaviour
 
     private void Shoot()
     {
-        PlayMuzzleFlash();
-        ProcessRaycast();
+        if (ammoSlot.GetCurrentAmmo() > 0)
+        {
+            PlayMuzzleFlash();
+            ProcessRaycast();
+            ammoSlot.ReduceCurrentAmmo();
+        }      
     }
 
     private void PlayMuzzleFlash()
